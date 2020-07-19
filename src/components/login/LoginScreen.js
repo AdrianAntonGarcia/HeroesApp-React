@@ -13,6 +13,8 @@ export const LoginScreen = ({ history }) => {
      */
     // history.replace('/');
 
+    const lastPath = localStorage.getItem('lastPath') || '/';
+
     const action = {
       type: types.login,
       payload: {
@@ -21,7 +23,7 @@ export const LoginScreen = ({ history }) => {
     };
     dispatch(action);
 
-    history.replace('/');
+    history.replace(lastPath);
   };
   return (
     <div className="container mt-5">
