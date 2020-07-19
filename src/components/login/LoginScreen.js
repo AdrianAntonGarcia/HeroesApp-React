@@ -12,6 +12,7 @@ export const LoginScreen = ({ history }) => {
      * no irá al login
      */
     // history.replace('/');
+
     const action = {
       type: types.login,
       payload: {
@@ -19,6 +20,7 @@ export const LoginScreen = ({ history }) => {
       },
     };
     dispatch(action);
+
     history.replace('/');
   };
   return (
